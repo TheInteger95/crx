@@ -165,7 +165,7 @@ def _lua_str_bytes(tok: str):
                     i += 4
                 elif e.isdigit():
                     j = i + 1
-                    while j < len(inner) and inner[j].isdigit() and j - (i + 1) < 2:
+                    while j < len(inner) and inner[j].isdigit() and j - (i + 1) < 3:
                         j += 1
                     out.append(int(inner[i + 1:j]) & 0xFF)
                     i = j
